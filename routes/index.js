@@ -5,7 +5,7 @@ var router = express.Router();
 router.get('/', function(req, res) {
   res.render('index',
       {
-          title: 'tools',
+          title: 'activity tools',
           link_show: req.session.user ? "注销":"登录",
           link: req.session.user ? "/logout":"/login"});
 });

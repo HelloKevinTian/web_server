@@ -3,13 +3,14 @@
 <head>
     <title><%= title %></title>
     <link href="/miniui/themes/default/miniui.css" rel="stylesheet" type="text/css" />
+    <link href="/miniui/themes/icons.css" rel="stylesheet" type="text/css" />
+    <link href="stylesheets/bootstrap-responsive.css" rel="stylesheet">
     <style type="text/css">
         body {
             padding-top: 60px;
             padding-bottom: 40px;
         }
     </style>
-    <link href="stylesheets/bootstrap-responsive.css" rel="stylesheet">
 </head>
 <body>
 <div class="navbar navbar-fixed-top">
@@ -36,17 +37,19 @@
 <input id="combo1" class="mini-combobox" style="width:150px;" textField="text" valueField="text" emptyText="<%= last_version_record %>"
        data ="<%= versions %>" value="<%= last_version_record %>" required="true" allowInput="true" showNullItem="true" nullItemText="请选择..."
        onvaluechanged="onVersionChanged"
-       onvalidation="onComboValidation"/>
+       onvalidation="onComboValidation"
+       required="true"/>
 
 <h4>选择渠道</h4>
 <input id="combo2" class="mini-combobox" style="width:150px;" textField="text"
        data ="<%= channels %>" value="cn" required="true" allowInput="true" showNullItem="true" nullItemText="请选择..."
        onvaluechanged="onValueChanged"
-       onvalidation="onComboValidation"/>
+       onvalidation="onComboValidation"
+       required="true"/>
 
 <a class="mini-button " plain="true" iconCls="icon-add" onclick="onAdd">添加</a>
 <a class="mini-button" plain="true" iconCls="icon-remove" onclick="onDel">删除</a>
-<a class="mini-button" plain="true" iconCls="icon-remove" onclick="onSave">保存</a>
+<a class="mini-button" plain="true" iconCls="icon-save" onclick="onSave">保存</a>
 
 <br /><br />
 <a
@@ -83,7 +86,7 @@
 <div id="container" class="container">
     <hr/>
     <footer>
-        <p><a href="http://blog.chinaunix.net/uid/8625039.html" target="_blank">King Lee</a> 2014</p>
+        <p><a href="http://www.chukong-inc.com/" target="_blank">&#169;chukong-inc</a> 2015</p>
     </footer>
 </div>
 </body>
