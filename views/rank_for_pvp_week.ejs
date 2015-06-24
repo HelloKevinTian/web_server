@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title><%= title %></title>
+        <!-- CSS goes in the document HEAD or added to your external stylesheet -->
+        <style type="text/css">
+        table.gridtable {
+            font-family: verdana,arial,sans-serif;
+            font-size:11px;
+            color:#333333;
+            border-width: 1px;
+            border-color: #666666;
+            border-collapse: collapse;
+        }
+        table.gridtable th {
+            border-width: 1px;
+            padding: 8px;
+            border-style: solid;
+            border-color: #666666;
+            background-color: #dedede;
+        }
+        table.gridtable td {
+            border-width: 1px;
+            padding: 8px;
+            border-style: solid;
+            border-color: #666666;
+            background-color: #ffffff;
+        }
+        </style>
+    </head>
+    <body>
+        <h4>上周排名信息（周三）</h4>
+        <!-- Table goes in the document BODY -->
+        <table class="gridtable">
+            <tr>
+                <th>排名</th>
+                <th>版本号</th>
+                <th>渠道号</th>
+                <th>姓名</th>
+                <th>手机</th>
+                <th>设备id</th>
+                <th>分数</th>
+                <th>最后pvp时间</th>
+            </tr>
+            <% if (rank_info.length) { %>
+                <% count = 1 %>
+                <% rank_info.forEach(function(rank){ %>
+                    <tr>
+                      <td><%= count %></td>
+                      <td><%= rank.version %></td>
+                      <td><%= rank.channel %></td>
+                      <td><%= rank.nickname %></td>
+                      <td><%= rank.phone %></td>
+                      <td><%= rank.device_id %></td>
+                      <td><%= rank.score %></td>
+                      <td><%= rank.date %></td>
+                    </tr>
+                    <% count++ %>
+                <% }) %>
+            <% } %>
+        </table>
+    </body>
+</html>
