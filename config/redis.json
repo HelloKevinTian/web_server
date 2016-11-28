@@ -1,7 +1,7 @@
 {
     "pool_1" : {
         "hostname" : "127.0.0.1",
-        "port" : 6379,
+        "port" : 6380,
         "max" : 10,
         "idleTimeoutMillis" : 30000,
         "log" : false,
